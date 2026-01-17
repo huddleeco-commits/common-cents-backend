@@ -1,0 +1,10 @@
+{
+  "name": "achievements",
+  "type": "backend",
+  "source": "financial",
+  "extractedAt": "2026-01-08T13:05:46.395Z",
+  "files": [
+    "routes/achievements.js",
+    "routes/challenges.js"
+  ]
+}

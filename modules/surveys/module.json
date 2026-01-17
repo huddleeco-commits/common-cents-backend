@@ -1,0 +1,9 @@
+﻿{
+  "name": "surveys",
+  "type": "backend",
+  "source": "commoncents",
+  "extractedAt": "2026-01-12T00:00:00.000Z",
+  "files": [
+    "routes/surveys.js"
+  ]
+}

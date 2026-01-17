@@ -1,0 +1,26 @@
+﻿{
+  "name": "fraud-detection",
+  "type": "backend",
+  "source": "common-cents",
+  "extractedAt": "2026-01-12T12:00:00.000Z",
+  "description": "Behavioral fingerprinting, velocity checks, and session analysis for fraud prevention",
+  "files": [
+    "routes/fraud.js",
+    "middleware/fraud-check.js",
+    "models/FraudEvent.js",
+    "services/fraud-detection.js",
+    "services/velocity-tracker.js",
+    "services/fingerprint.js"
+  ],
+  "dependencies": ["auth"],
+  "brainConfig": {
+    "fraud": {
+      "enabled": true,
+      "maxSurveysPerHour": 20,
+      "maxSurveysPerDay": 100,
+      "minSurveyCompletionTime": 30,
+      "blockVPN": true,
+      "blockDuplicateDevices": true
+    }
+  }
+}

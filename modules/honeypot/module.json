@@ -1,0 +1,21 @@
+﻿{
+  "name": "honeypot",
+  "type": "backend",
+  "source": "common-cents",
+  "extractedAt": "2026-01-12T12:00:00.000Z",
+  "description": "Invisible form fields and bot detection to catch automated abuse",
+  "files": [
+    "middleware/honeypot.js",
+    "models/BotDetection.js",
+    "services/honeypot.js"
+  ],
+  "dependencies": ["fraud-detection"],
+  "brainConfig": {
+    "honeypot": {
+      "enabled": true,
+      "fieldNames": ["website", "url", "homepage", "company_url"],
+      "autoBanThreshold": 3,
+      "banDurationHours": 24
+    }
+  }
+}

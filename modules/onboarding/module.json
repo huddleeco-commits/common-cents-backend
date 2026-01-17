@@ -1,0 +1,27 @@
+﻿{
+  "name": "onboarding",
+  "type": "backend",
+  "source": "common-cents",
+  "extractedAt": "2026-01-12T12:00:00.000Z",
+  "description": "User onboarding flow tracking, welcome rewards, and profile completion",
+  "files": [
+    "routes/onboarding.js",
+    "models/OnboardingProgress.js",
+    "services/onboarding.js"
+  ],
+  "dependencies": ["auth", "user-balance"],
+  "brainConfig": {
+    "onboarding": {
+      "enabled": true,
+      "steps": ["welcome", "profile", "verify_phone", "first_survey", "payout_setup"],
+      "rewards": {
+        "welcome": 0.50,
+        "profile_complete": 1.00,
+        "phone_verified": 2.00,
+        "first_survey": 0,
+        "payout_setup": 0.50
+      },
+      "skipAllowed": false
+    }
+  }
+}

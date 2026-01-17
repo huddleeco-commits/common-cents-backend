@@ -1,0 +1,27 @@
+﻿{
+  "name": "payout-verification",
+  "type": "backend",
+  "source": "common-cents",
+  "extractedAt": "2026-01-12T12:00:00.000Z",
+  "description": "Phone verification and mobile money integration for secure payouts (M-Pesa, GCash, PayPal)",
+  "files": [
+    "routes/verification.js",
+    "middleware/verified-only.js",
+    "models/Verification.js",
+    "services/phone-verify.js",
+    "services/payout-providers.js"
+  ],
+  "dependencies": ["auth", "user-balance"],
+  "brainConfig": {
+    "payoutVerification": {
+      "enabled": true,
+      "requirePhoneVerification": true,
+      "minBalanceForPayout": 5.00,
+      "providers": {
+        "paypal": { "enabled": true },
+        "mpesa": { "enabled": true, "countries": ["KE", "TZ", "UG"] },
+        "gcash": { "enabled": true, "countries": ["PH"] }
+      }
+    }
+  }
+}
